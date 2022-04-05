@@ -33,7 +33,7 @@ node{
 	try{
 		sh 'docker rm -f tomcat'
 	}catch(error){
-		//  do nothing if there is an exceptions
+		//  do nothing if there is an exception
 	}
    stage('Docker deployment'){
    sh 'docker run -d -p 8090:8080 --name tomcat anantharajaru/myfirst:0.0.3' 
